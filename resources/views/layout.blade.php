@@ -153,6 +153,18 @@
     <nav>
         <ul>
             <li><a href="{{ url('/') }}">Inicio</a></li>
+            <!-- 🔑 NUEVO DROPDOWN DE USUARIOS -->
+            <li class="dropdown">
+                <span class="dropdown-title">Usuarios ▾</span>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('users.create') }}">➕ Crear Usuario</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('users.index') }}">📋 Listado de Usuarios</a>
+                    </li>
+                </ul>
+            </li>
             <li><a href="{{ route('estudiantes.index') }}">Estudiantes</a></li>
             <li class="dropdown">
                 <span class="dropdown-title">Reportes ▾</span>
@@ -180,6 +192,19 @@
                     </li>
                     <li>
                         <a href="{{ url('/reportes') }}">Reportes Contables</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span class="dropdown-title">{{ Auth::user()->name }} ▾</span>
+                <ul class="dropdown-menu">
+                    <li>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" style="background:none; border:none; color:white; cursor:pointer;">
+                                🔓 Cerrar sesión
+                            </button>
+                        </form>
                     </li>
                 </ul>
             </li>

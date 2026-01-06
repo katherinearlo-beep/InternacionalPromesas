@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountingEntryController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\IngresoController;
 use App\Http\Controllers\PucController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\ReciboController;
 use App\Http\Controllers\ReportesController;
 use App\Http\Controllers\ReporteEstudiantesController;
 use App\Http\Controllers\ReportesTotalesController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -51,3 +53,9 @@ Route::get('/recibos/{recibo}', [ReciboController::class, 'show'])
     ->name('recibos.show');
 Route::get('/recibos/{recibo}/pdf', [ReciboController::class, 'pdf'])
     ->name('recibos.pdf');
+
+Route::resource('users', UserController::class)->middleware('auth');
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
