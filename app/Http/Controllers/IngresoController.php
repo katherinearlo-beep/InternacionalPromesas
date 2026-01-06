@@ -65,7 +65,7 @@ class IngresoController extends Controller
             'concepto' => 'required|in:Matricula,Mensualidad,Póliza,Uniforme,Boletas,Torneos',
             'mes_correspondiente' => 'nullable|required_if:concepto,Mensualidad',
             'valor' => 'required|numeric|min:0',
-            'medio_pago' => 'required|in:Transferencia,Efectivo',
+            'medio_pago' => 'required|in:Transferencia,Cuenta Anterior 2025,Efectivo',
             'fecha' => 'required|date',
         ]);
 

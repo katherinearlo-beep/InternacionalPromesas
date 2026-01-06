@@ -79,7 +79,7 @@
                     <div style="grid-column: span 4;">
                         <label>Medio de pago *</label>
                         <select name="medio_pago" class="form-input" required>
-                            @foreach(['Transferencia','Efectivo'] as $medio)
+                            @foreach(['Transferencia','Cuenta Anterior 2025','Efectivo'] as $medio)
                                 <option value="{{ $medio }}"
                                     {{ old('medio_pago', $ingreso->medio_pago) == $medio ? 'selected' : '' }}>
                                     {{ $medio }}

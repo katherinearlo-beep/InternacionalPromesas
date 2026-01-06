@@ -63,6 +63,7 @@
                     <select name="medio_pago" class="form-input" required>
                         <option value="">Seleccione</option>
                         <option value="Transferencia">Transferencia</option>
+                        <option value="Cuenta Anterior 2025">Cuenta Anterior 2025</option>
                         <option value="Efectivo">Efectivo</option>
                     </select>
                 </div>
