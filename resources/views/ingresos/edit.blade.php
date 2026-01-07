@@ -48,7 +48,7 @@
                     <div style="grid-column: span 4;">
                         <label>Concepto *</label>
                         <select name="concepto" id="concepto" class="form-input" required>
-                            @foreach(['Matricula','Mensualidad','Póliza','Uniforme','Boletas','Torneos'] as $c)
+                            @foreach(['Matricula','Mensualidad','Póliza','Uniforme','Boletas','Torneos','Fisioterapia'] as $c)
                                 <option value="{{ $c }}"
                                     {{ old('concepto', $ingreso->concepto) == $c ? 'selected' : '' }}>
                                     {{ $c }}
