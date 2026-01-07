@@ -34,6 +34,7 @@
                         <option value="Uniforme">Uniforme</option>
                         <option value="Boletas">Boletas</option>
                         <option value="Torneos">Torneos</option>
+                        <option value="Fisioterapia">Fisioterapia</option>
                     </select>
                 </div>
 
