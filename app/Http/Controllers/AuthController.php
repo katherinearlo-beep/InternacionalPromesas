@@ -26,7 +26,7 @@ class AuthController extends Controller
         // Intentamos autenticar
         if (Auth::attempt($request->only('email', 'password'))) {
             $request->session()->regenerate();
-            return redirect()->intended('/'); // o a dashboard
+            return redirect()->route('home');
         }
 
         return back()->withErrors([
