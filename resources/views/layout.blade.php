@@ -38,10 +38,14 @@
             margin: 0;
             padding: 0;
             display: flex;
+            align-items: center; /* Alinea verticalmente todos los li */
+            gap: 25px; /* Espaciado uniforme */
         }
 
         nav li {
-            margin-left: 25px;
+            position: relative; /* Necesario para los dropdowns */
+            display: flex;
+            align-items: center; /* Centra el contenido verticalmente */
         }
 
         nav a {
@@ -55,40 +59,28 @@
             text-decoration: underline;
         }
 
-        .dropdown {
-            position: relative;
-            padding-bottom: 10px; /* 🔑 mantiene el hover activo */
+        .dropdown-title {
+            display: flex;
+            align-items: center;
+            gap: 5px; /* Espacio entre nombre y flecha */
         }
 
-        .dropdown-title {
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-            display: inline-block;
-            padding: 5px 0;
-        }
 
         .dropdown-menu {
             display: none;
             position: absolute;
-            top: 100%;          /* 🔑 pegado al título */
+            top: 100%;  /* Pegado justo debajo del título */
             left: 0;
             background-color: #6a1b9a;
-            padding: 8px 0;
             border-radius: 6px;
             min-width: 220px;
             z-index: 1000;
+            padding: 0; /* Quitamos padding extra del contenedor */
         }
 
-        .dropdown-menu li {
-            margin: 0;
-        }
-
-        .dropdown-menu a {
+        .dropdown-menu li a {
             display: block;
             padding: 10px 20px;
-            font-size: 14px;
             color: white;
             text-decoration: none;
         }
