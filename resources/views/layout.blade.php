@@ -160,7 +160,6 @@
             <li><a href="{{ route('estudiantes.index') }}">Estudiantes</a></li>
             <li class="dropdown">
                 <span class="dropdown-title">Reportes ▾</span>
-
                 <ul class="dropdown-menu">
                     <li>
                         <a href="{{ route('reporteEstudiantes.index') }}">
@@ -170,6 +169,11 @@
                     <li>
                         <a href="{{ route('reportesTotales.index') }}">
                             💰 Reportes Totales
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('reporteEstudiantes.categoria') }}">
+                            🏆 Reporte por categoría
                         </a>
                     </li>
                 </ul>
