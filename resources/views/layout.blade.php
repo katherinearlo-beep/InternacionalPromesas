@@ -179,18 +179,20 @@
                 </ul>
             </li>
             <li><a href="{{ route('ingresos.index') }}">Ingresos</a></li>
+            <!--
             <li class="dropdown">
                 <span class="dropdown-title">Contabilidad ▾</span>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="{{ route('contabilidad.index') }}">Asientos Contables</a>
+                        <a href="{/{ route('contabilidad.index') }}">Asientos Contables</a>
                     </li>
                     <li>
-                        <a href="{{ url('/reportes') }}">Reportes Contables</a>
+                        <a href="{/{ url('/reportes') }}">Reportes Contables</a>
                     </li>
                 </ul>
             </li>
+            -->
             <li class="dropdown">
                 <span class="dropdown-title">{{ Auth::user()->name }} ▾</span>
                 <ul class="dropdown-menu">
