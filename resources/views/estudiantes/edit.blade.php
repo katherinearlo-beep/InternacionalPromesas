@@ -152,7 +152,8 @@
                     <select name="categoria" class="form-input">
                         <option value="">Seleccione</option>
                         @foreach([
-                            'Estimulación','SUB 8','SUB 9','SUB 10','SUB 11',
+                            'Estimulación','SUB 6','SUB 7','SUB 8','SUB 9','SUB 10',
+                            'SUB 11 Rendimiento','SUB 11 Academia',
                             'SUB 12 Rendimiento','SUB 12 Academia',
                             'SUB 13 Rendimiento','SUB 13 Academia',
                             'SUB 14 Rendimiento','SUB 14 Academia',
