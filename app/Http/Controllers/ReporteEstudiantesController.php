@@ -39,4 +39,22 @@ class ReporteEstudiantesController extends Controller
             'total'
         ));
     }
+
+    // Método para mostrar estudiantes por categoría
+    public function reportePorCategoria(Request $request)
+    {
+        // Obtenemos la categoría desde la solicitud
+        $categoria = $request->input('categoria');
+
+        // Si se selecciona una categoría, filtramos los estudiantes por categoría
+        if ($categoria) {
+            $estudiantes = Estudiante::where('categoria', $categoria)->get();
+        } else {
+            // Si no hay categoría seleccionada, mostramos todos los estudiantes
+            $estudiantes = Estudiante::all();
+        }
+
+        // Retornamos la vista con los estudiantes filtrados
+        return view('reporteEstudiantes.categoria', compact('estudiantes'));
+    }
 }
