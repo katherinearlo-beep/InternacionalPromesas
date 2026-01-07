@@ -7,5 +7,5 @@
         </td>
     </tr>
     <h1>Bienvenido a Internacional Promesas</h1>
-    <p>Este es el sistema contable de la escuela, donde puedes acceder a los módulos de contabilidad y reportes contables.</p>
+    <p>Este es el sistema del club, donde puedes acceder a los módulos de  Registro, Ingresos y Reportes de estudiantes.</p>
 @endsection
