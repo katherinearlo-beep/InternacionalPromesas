@@ -83,6 +83,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/reporte-estudiantes', [ReporteEstudiantesController::class, 'reporteEstudiantes'])
         ->name('reporteEstudiantes.index');
+    Route::get('/reporte-categoria', [ReporteEstudiantesController::class, 'reportePorCategoria'])->name('reporteEstudiantes.categoria');
 
     Route::get('/reportes-totales', [ReportesTotalesController::class, 'index'])
         ->name('reportesTotales.index');
