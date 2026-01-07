@@ -121,10 +121,13 @@
                     <select name="categoria" class="form-input">
                         <option value="">Seleccione</option>
                         <option>Estimulación</option>
+                        <option>SUB 6</option>
+                        <option>SUB 7</option>
                         <option>SUB 8</option>
                         <option>SUB 9</option>
                         <option>SUB 10</option>
-                        <option>SUB 11</option>
+                        <option>SUB 11 Rendimiento</option>
+                        <option>SUB 11 Academia</option>
                         <option>SUB 12 Rendimiento</option>
                         <option>SUB 12 Academia</option>
                         <option>SUB 13 Rendimiento</option>
