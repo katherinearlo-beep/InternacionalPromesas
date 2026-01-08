@@ -101,8 +101,8 @@
 
         </div>
         {{-- PAGINACIÓN --}}
-        <div style="margin-top:25px; display:flex; justify-content:center;">
-            {{ $ingresos->onEachSide(1)->links() }}
+        <div style="margin-top: 20px;">
+            {{ $ingresos->links('pagination.simple') }}
         </div>
 
     </div>
