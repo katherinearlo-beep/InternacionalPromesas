@@ -16,7 +16,7 @@ class EstudianteController extends Controller
      */
     public function index()
     {
-        $estudiantes = Estudiante::orderBy('nombre_completo')->get();
+        $estudiantes = Estudiante::orderBy('nombre_completo')->paginate(10);
         return view('estudiantes.index', compact('estudiantes'));
     }
 
