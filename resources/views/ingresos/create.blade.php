@@ -35,6 +35,8 @@
                         <option value="Boletas">Boletas</option>
                         <option value="Torneos">Torneos</option>
                         <option value="Fisioterapia">Fisioterapia</option>
+                        <option value="Morral">Morral</option>
+                        <option value="Uniforme de Presentacion">Uniforme de Presentacion</option>
                     </select>
                 </div>
 
