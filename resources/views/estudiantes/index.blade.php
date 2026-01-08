@@ -75,5 +75,8 @@
             @endforeach
             </tbody>
         </table>
+        <div style="margin-top: 20px; display: flex; justify-content: center;">
+            {{ $estudiantes->links() }}
+        </div>
     @endif
 @endsection
