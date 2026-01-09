@@ -29,7 +29,17 @@
 
                 <div style="grid-column: span 4;">
                     <label>Documento *</label>
-                    <input type="text" name="documento" required class="form-input">
+                    <input
+                        type="text"
+                        name="documento"
+                        required
+                        class="form-input"
+                        value="{{ old('documento') }}"
+                    >
+
+                    @error('documento')
+                    <small style="color: #e3342f;">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div style="grid-column: span 8;">
@@ -146,9 +156,9 @@
                     <label>Modalidad de contrato</label>
                     <select name="modalidad_contrato" class="form-input">
                         <option value="">Seleccione</option>
-                        <option>Mensual</option>
-                        <option>Becado 50%</option>
-                        <option>Becado 100%</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="becado_50">Becado 50%</option>
+                        <option value="becado_100">Becado 100%</option>
                     </select>
                 </div>
 
