@@ -44,7 +44,7 @@ class UpdateEstudianteRequest extends FormRequest
             'altura' => 'nullable|numeric',
             'talla_uniforme' => 'nullable|string',
             'categoria' => 'nullable|string',
-            'modalidad_contrato' => 'nullable|string',
+            'modalidad_contrato' => 'nullable|in:mensual,becado_50,becado_100',
             'sede' => 'nullable|string',
             'precio_mensualidad' => 'nullable|numeric',
 
