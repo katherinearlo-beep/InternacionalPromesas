@@ -171,10 +171,15 @@
                 <div style="grid-column: span 3;">
                     <label>Modalidad de contrato</label>
                     <select name="modalidad_contrato" class="form-input">
-                        @foreach(['Mensual','Becado 50%','Becado 100%'] as $modalidad)
-                            <option value="{{ $modalidad }}"
-                                {{ old('modalidad_contrato', $estudiante->modalidad_contrato) == $modalidad ? 'selected' : '' }}>
-                                {{ $modalidad }}
+                        @foreach([
+                            'mensual' => 'Mensual',
+                            'becado_50' => 'Becado 50%',
+                            'becado_100' => 'Becado 100%'
+                        ] as $value => $label)
+
+                            <option value="{{ $value }}"
+                                {{ old('modalidad_contrato', $estudiante->modalidad_contrato) == $value ? 'selected' : '' }}>
+                                {{ $label }}
                             </option>
                         @endforeach
                     </select>
