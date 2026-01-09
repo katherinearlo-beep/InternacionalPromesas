@@ -35,7 +35,7 @@ class StoreEstudianteRequest extends FormRequest
             'altura' => 'nullable|integer',
             'talla_uniforme' => 'nullable|string',
             'categoria' => 'nullable|string',
-            'modalidad_contrato' => 'nullable|string',
+            'modalidad_contrato' => 'nullable|in:mensual,becado_50,becado_100',
             'sede' => 'nullable|string',
             'precio_mensualidad' => 'nullable|numeric',
 
@@ -70,6 +70,14 @@ class StoreEstudianteRequest extends FormRequest
             'enfermedad_respiratoria' => 'nullable|boolean',
             'apto_deporte' => 'nullable|boolean',
             'contacto_emergencia' => 'nullable|string',
+        ];
+    }
+    
+    public function messages(): array
+    {
+        return [
+            'documento.unique' => 'El estudiante ya se encuentra registrado.',
+            'documento.required' => 'El campo documento es obligatorio.',
         ];
     }
 }
