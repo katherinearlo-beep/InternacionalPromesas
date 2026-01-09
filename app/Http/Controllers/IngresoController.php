@@ -62,7 +62,7 @@ class IngresoController extends Controller
     {
         $request->validate([
             'estudiante_id' => 'required|exists:estudiantes,id',
-            'concepto' => 'required|in:Matricula,Mensualidad,Póliza,Uniforme,Boletas,Torneos,Fisioterapia,Morral,Uniforme de Presentacion',
+            'concepto' => 'required|in:Matricula,Mensualidad,Póliza,Uniforme,Boletas,Torneos,Fisioterapia,Morral,Uniforme de Presentacion,Paz y Salvo',
             'mes_correspondiente' => 'nullable|required_if:concepto,Mensualidad',
             'valor' => 'required|numeric|min:0',
             'medio_pago' => 'required|in:Transferencia,Cuenta Anterior 2025,Efectivo',
