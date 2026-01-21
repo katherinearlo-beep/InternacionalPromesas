@@ -39,9 +39,7 @@ class UpdateEstudianteRequest extends FormRequest
             'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
 
             'sexo' => 'nullable|string',
-            'peso' => 'nullable|numeric',
             'edad' => 'nullable|numeric',
-            'altura' => 'nullable|numeric',
             'talla_uniforme' => 'nullable|string',
             'categoria' => 'nullable|string',
             'modalidad_contrato' => 'nullable|in:mensual,becado_50,becado_100',
