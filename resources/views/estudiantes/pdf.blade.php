@@ -84,8 +84,6 @@
     <tr><td class="label">Fecha ingreso:</td><td>{{ $estudiante->fecha_ingreso }}</td></tr>
     <tr><td class="label">Sexo:</td><td>{{ $estudiante->sexo }}</td></tr>
     <tr><td class="label">Edad:</td><td>{{ $estudiante->edad }}</td></tr>
-    <tr><td class="label">Peso:</td><td>{{ $estudiante->peso }}</td></tr>
-    <tr><td class="label">Altura:</td><td>{{ $estudiante->altura }}</td></tr>
     <tr><td class="label">Talla de uniforme:</td><td>{{ $estudiante->talla_uniforme }}</td></tr>
     <tr><td class="label">Categoria:</td><td>{{ $estudiante->categoria }}</td></tr>
     <tr><td class="label">Modalidad de Contrato:</td><td>{{ $estudiante->modalidad_contrato }}</td></tr>
