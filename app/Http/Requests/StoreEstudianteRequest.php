@@ -31,8 +31,6 @@ class StoreEstudianteRequest extends FormRequest
             // ===== INFO DEPORTIVA =====
             'sexo' => 'nullable|string',
             'edad' => 'nullable|integer',
-            'peso' => 'nullable|numeric',
-            'altura' => 'nullable|integer',
             'talla_uniforme' => 'nullable|string',
             'categoria' => 'nullable|string',
             'modalidad_contrato' => 'nullable|in:mensual,becado_50,becado_100',
