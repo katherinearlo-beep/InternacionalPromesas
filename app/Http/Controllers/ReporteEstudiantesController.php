@@ -13,7 +13,7 @@ class ReporteEstudiantesController extends Controller
         $estudiantes = Estudiante::orderBy('nombre_completo')->get();
 
         $estudianteId = $request->estudiante_id;
-        $mes  = $request->mes ?? now()->month;
+        $mes  = $request->mes;
         $anio = $request->anio ?? now()->year;
 
         $ingresos = collect();
@@ -22,14 +22,15 @@ class ReporteEstudiantesController extends Controller
         if ($estudianteId) {
             $ingresos = Ingreso::with('estudiante')
                 ->where('estudiante_id', $estudianteId)
-                ->whereMonth('fecha', $mes)
+                ->when($mes, function ($query) use ($mes) {
+                    $query->whereMonth('fecha', $mes);
+                })
                 ->whereYear('fecha', $anio)
                 ->orderBy('fecha')
                 ->get();
 
             $total = $ingresos->sum('valor');
         }
-
         return view('reporteEstudiantes.index', compact(
             'estudiantes',
             'ingresos',
