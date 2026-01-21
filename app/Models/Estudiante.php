@@ -21,8 +21,6 @@ class Estudiante extends Model
 
         'sexo',
         'edad',
-        'peso',
-        'altura',
         'talla_uniforme',
         'categoria',
         'modalidad_contrato',
