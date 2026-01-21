@@ -111,16 +111,6 @@
                     <input type="number" name="edad" class="form-input">
                 </div>
 
-                <div style="grid-column: span 2;">
-                    <label>Peso (kg)</label>
-                    <input type="number" step="0.1" name="peso" class="form-input">
-                </div>
-
-                <div style="grid-column: span 2;">
-                    <label>Altura (cm)</label>
-                    <input type="number" name="altura" class="form-input">
-                </div>
-
                 <div style="grid-column: span 3;">
                     <label>Talla uniforme</label>
                     <input type="text" name="talla_uniforme" class="form-input">
