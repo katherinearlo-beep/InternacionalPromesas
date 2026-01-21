@@ -28,6 +28,7 @@
             <div style="grid-column: span 4;">
                 <label>Mes</label>
                 <select name="mes" class="form-input">
+                    <option value="">Todos los meses</option>
                     @foreach([
                         1=>'Enero',2=>'Febrero',3=>'Marzo',4=>'Abril',
                         5=>'Mayo',6=>'Junio',7=>'Julio',8=>'Agosto',
