@@ -159,7 +159,7 @@
             </li>
             <li><a href="{{ route('estudiantes.index') }}">Estudiantes</a></li>
             <li class="dropdown">
-                <span class="dropdown-title">Reportes ▾</span>
+               <span class="dropdown-title">Reportes de Ingresos ▾</span>
                 <ul class="dropdown-menu">
                     <li>
                         <a href="{{ route('reporteEstudiantes.index') }}">
@@ -179,6 +179,26 @@
                 </ul>
             </li>
             <li><a href="{{ route('ingresos.index') }}">Ingresos</a></li>
+            <li class="dropdown">
+                <span class="dropdown-title">Gastos y Egresos ▾</span>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('gastos.create') }}">
+                            ➖ Registrar Gasto / Egreso
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('gastos.index') }}">
+                            📋 Listado de Gastos y Egresos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('gastos.reportes') }}">
+                            📊 Reportes de Gastos
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <!--
             <li class="dropdown">
                 <span class="dropdown-title">Contabilidad ▾</span>
