@@ -91,5 +91,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/recibos/{recibo}', [ReciboController::class, 'show'])->name('recibos.show');
     Route::get('/recibos/{recibo}/pdf', [ReciboController::class, 'pdf'])->name('recibos.pdf');
 
+    Route::get('/gastos', [GastoController::class, 'index'])->name('gastos.index');
+    Route::post('/gastos', [GastoController::class, 'store'])->name('gastos.store');
+    Route::get('/gastos/crear', [GastoController::class, 'create'])->name('gastos.create');
+    Route::get('/gastos/reportes', [GastoController::class, 'reportes'])->name('gastos.reportes');
+
     Route::resource('users', UserController::class);
 });
