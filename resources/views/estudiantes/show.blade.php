@@ -76,14 +76,6 @@
                     <td>{{ $estudiante->edad }}</td>
                 </tr>
                 <tr>
-                    <td><strong>Peso:</strong></td>
-                    <td>{{ $estudiante->peso ?? '-' }}</td>
-                </tr>
-                <tr>
-                    <td><strong>Altura (cm):</strong></td>
-                    <td>{{ $estudiante->altura ?? '-' }}</td>
-                </tr>
-                <tr>
                     <td><strong>Talla de uniforme:</strong></td>
                     <td>{{ $estudiante->talla_uniforme ?? '-' }}</td>
                 </tr>
