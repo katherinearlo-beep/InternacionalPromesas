@@ -96,5 +96,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/gastos/crear', [GastoController::class, 'create'])->name('gastos.create');
     Route::get('/gastos/reportes', [GastoController::class, 'reportes'])->name('gastos.reportes');
 
+    Route::get('/reportes/estado-resultados', [EstadoResultadosController::class, 'index'])->name('reportes.estado-resultados');
+
     Route::resource('users', UserController::class);
 });
