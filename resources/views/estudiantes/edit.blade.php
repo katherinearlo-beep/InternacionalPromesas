@@ -129,18 +129,6 @@
                            value="{{ old('edad', $estudiante->edad) }}">
                 </div>
 
-                <div style="grid-column: span 2;">
-                    <label>Peso (kg)</label>
-                    <input type="number" step="0.1" name="peso" class="form-input"
-                           value="{{ old('peso', $estudiante->peso) }}">
-                </div>
-
-                <div style="grid-column: span 2;">
-                    <label>Altura (cm)</label>
-                    <input type="number" name="altura" class="form-input"
-                           value="{{ old('altura', $estudiante->altura) }}">
-                </div>
-
                 <div style="grid-column: span 3;">
                     <label>Talla de uniforme</label>
                     <input type="text" name="talla_uniforme" class="form-input"
