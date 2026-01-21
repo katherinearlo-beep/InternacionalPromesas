@@ -199,20 +199,17 @@
                     </li>
                 </ul>
             </li>
-            <!--
             <li class="dropdown">
                 <span class="dropdown-title">Contabilidad ▾</span>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="{/{ route('contabilidad.index') }}">Asientos Contables</a>
-                    </li>
-                    <li>
-                        <a href="{/{ url('/reportes') }}">Reportes Contables</a>
+                        <a href="{{ route('reportes.estado-resultados') }}">
+                            📊 Estado de Resultados
+                        </a>
                     </li>
                 </ul>
             </li>
-            -->
             <li class="dropdown">
                 <span class="dropdown-title">{{ Auth::user()->name }} ▾</span>
                 <ul class="dropdown-menu">
