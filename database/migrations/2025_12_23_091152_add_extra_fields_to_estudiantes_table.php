@@ -13,8 +13,6 @@ return new class extends Migration {
             $table->string('foto')->nullable()->after('documento');
             $table->enum('sexo', ['masculino', 'femenino', 'sin_definir'])->nullable();
             $table->integer('edad')->nullable();
-            $table->decimal('peso', 5, 2)->nullable(); // kg
-            $table->decimal('altura', 5, 2)->nullable(); // cm
             $table->string('talla_uniforme')->nullable();
 
             $table->boolean('otro_club')->default(false);
