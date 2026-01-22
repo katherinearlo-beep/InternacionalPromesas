@@ -144,7 +144,7 @@
     </div>
     <nav>
         <ul>
-            <li><a href="{{ url('/') }}">Inicio</a></li>
+            <li><a href="{{ route('home') }}">Inicio</a></li>
             <!-- 🔑 NUEVO DROPDOWN DE USUARIOS -->
             <li class="dropdown">
                 <span class="dropdown-title">Usuarios ▾</span>
