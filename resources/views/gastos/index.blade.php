@@ -66,6 +66,7 @@
                 <th>Concepto</th>
                 <th>Sede</th>
                 <th style="text-align:right;">Valor</th>
+                <th style="text-align:center;">Acciones</th>
             </tr>
             </thead>
             <tbody>
@@ -78,6 +79,29 @@
                     <td style="text-transform:capitalize;">{{ $gasto->sede }}</td>
                     <td style="text-align:right;">
                         $ {{ number_format($gasto->valor, 2, ',', '.') }}
+                    </td>
+                    <td style="text-align:center; white-space:nowrap;">
+
+                        {{-- EDITAR --}}
+                        <a href="{{ route('gastos.edit', $gasto) }}"
+                           style="color:#1565c0; margin-right:8px; text-decoration:none;">
+                            ✏️
+                        </a>
+
+                        {{-- ELIMINAR --}}
+                        <form action="{{ route('gastos.destroy', $gasto) }}"
+                              method="POST"
+                              style="display:inline;"
+                              onsubmit="return confirm('¿Seguro que deseas eliminar este gasto?');">
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit"
+                                    style="border:none; background:none; cursor:pointer; color:#c62828;">
+                                🗑️
+                            </button>
+                        </form>
+
                     </td>
                 </tr>
             @empty
