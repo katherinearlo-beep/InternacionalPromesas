@@ -38,6 +38,7 @@
                         <option value="Morral">Morral</option>
                         <option value="Uniforme de Presentacion">Uniforme de Presentacion</option>
                         <option value="Paz y Salvo">Paz y Salvo</option>
+                        <option value="Cartera 2025">Cartera 2025</option>
                     </select>
                 </div>
 
