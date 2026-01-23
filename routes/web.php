@@ -95,6 +95,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/gastos', [GastoController::class, 'store'])->name('gastos.store');
     Route::get('/gastos/crear', [GastoController::class, 'create'])->name('gastos.create');
     Route::get('/gastos/reportes', [GastoController::class, 'reportes'])->name('gastos.reportes');
+     Route::get('/gastos/{gasto}/editar', [GastoController::class, 'edit'])->name('gastos.edit');
+    Route::put('/gastos/{gasto}', [GastoController::class, 'update'])->name('gastos.update');
+    Route::delete('/gastos/{gasto}', [GastoController::class, 'destroy'])->name('gastos.destroy');
 
     Route::get('/reportes/estado-resultados', [EstadoResultadosController::class, 'index'])->name('reportes.estado-resultados');
     
