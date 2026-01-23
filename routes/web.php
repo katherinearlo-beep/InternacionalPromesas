@@ -97,6 +97,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/gastos/reportes', [GastoController::class, 'reportes'])->name('gastos.reportes');
 
     Route::get('/reportes/estado-resultados', [EstadoResultadosController::class, 'index'])->name('reportes.estado-resultados');
+    
+    Route::get('/cartera', [ReporteCarteraController::class, 'carteraPorCategoria'])->name('cartera.index');
 
     Route::resource('users', UserController::class);
 });
