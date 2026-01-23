@@ -208,6 +208,11 @@
                             📊 Estado de Resultados
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ route('cartera.index') }}">
+                            📋 Cartera
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li class="dropdown">
