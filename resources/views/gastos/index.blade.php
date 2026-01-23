@@ -90,8 +90,9 @@
             </tbody>
         </table>
 
-        <div style="margin-top:15px;">
-            {{ $gastos->links() }}
+        {{-- PAGINACIÓN --}}
+        <div style="margin-top: 20px;">
+            {{ $gastos->links('pagination.simple') }}
         </div>
 
     </div>
