@@ -79,6 +79,47 @@ class GastoController extends Controller
     }
 
     /**
+     * Formulario de edición
+     */
+    public function edit(Gasto $gasto)
+    {
+        return view('gastos.edit', compact('gasto'));
+    }
+
+    /**
+     * Actualizar gasto
+     */
+    public function update(Request $request, Gasto $gasto)
+    {
+        $request->validate([
+            'fecha'    => ['required', 'date'],
+            'nit'      => ['required', 'string', 'max:30'],
+            'nombre'   => ['required', 'string', 'max:255'],
+            'concepto' => ['required', 'string', 'max:255'],
+            'sede'     => ['required', 'in:envigado,itagui'],
+            'valor'    => ['required', 'numeric', 'min:0'],
+        ]);
+
+        $gasto->update($request->all());
+
+        return redirect()
+            ->route('gastos.index')
+            ->with('success', 'Gasto actualizado correctamente');
+    }
+
+    /**
+     * Eliminar gasto
+     */
+    public function destroy(Gasto $gasto)
+    {
+        $gasto->delete();
+
+        return redirect()
+            ->route('gastos.index')
+            ->with('success', 'Gasto eliminado correctamente');
+    }
+
+    /**
      * Reportes de gastos
      * GET /gastos/reportes
      */
