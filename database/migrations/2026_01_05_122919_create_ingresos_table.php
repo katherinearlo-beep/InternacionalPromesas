@@ -28,6 +28,11 @@ return new class extends Migration
                 'Uniforme',
                 'Boletas',
                 'Torneos',
+                'Fisioterapia',
+                'Morral',
+                'Uniforme de Presentacion',
+                'Paz y Salvo',
+                'Cartera 2025',
             ]);
 
             // Solo para mensualidades
